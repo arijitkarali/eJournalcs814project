@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frontend.Master.cs" Inherits="eLibrary.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <%---custom css---%>
+    <link href="css/customstyle.css" rel="stylesheet"/>
+
+    <%---bootstrap css---%>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <%---datatables css---%>
+    <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <%---bootstrap jquery---%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <%---fontawesome-jquery---%>
+    <script src="https://kit.fontawesome.com/33e384439a.js" crossorigin="anonymous"></script>
+
+    <%---datatables jquery---%>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <img src="images/websitelogo.png" width="40" height="40"/>
+                    eLibrary
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target
+                    ="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle-navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Catalog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Browse</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <asp:LinkButton Class="nav-link active" ID="LinkButton1" runat="server"
+                            >User Login</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item">
+                            <asp:LinkButton Class="nav-link active" ID="LinkButton2" runat="server"
+                            >SignUp</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item">
+                            <asp:LinkButton Class="nav-link active" ID="LinkButton3" runat="server"
+                            >Logout</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <%---main content---%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%---main content---%>
+        <footer>
+        <div id="footer1" class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <p>
+                        <asp:LinkButton Class="footerlinks" ID="LinkButton4" runat="server"
+                            >Admin Login</asp:LinkButton>&nbsp;
+                        <asp:LinkButton Class="footerlinks" ID="LinkButton5" runat="server"
+                            >Author Management</asp:LinkButton>&nbsp;
+                        <asp:LinkButton Class="footerlinks" ID="LinkButton6" runat="server"
+                            >Publisher management</asp:LinkButton>&nbsp;
+                        <asp:LinkButton Class="footerlinks" ID="LinkButton7" runat="server"
+                            >Book Inventory</asp:LinkButton>&nbsp;
+                        <asp:LinkButton Class="footerlinks" ID="LinkButton8" runat="server"
+                            >Book Isuing</asp:LinkButton>&nbsp;
+                        <asp:LinkButton Class="footerlinks" ID="LinkButton9" runat="server"
+                            >Member Management</asp:LinkButton>&nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer2" class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <p style="color:whitesmoke">
+                        <a class="footerlinks" href="#" target="_blank">Reach Us</a>
+                        <a class="footerlinks" href="#" target="_blank">Terms & Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>
