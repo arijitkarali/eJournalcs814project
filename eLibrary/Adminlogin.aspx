@@ -23,7 +23,7 @@
                                 </div>
                                 <div class ="row" style="padding-bottom:20px;">
                                     <div class="col">
-                                        <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password"></asp:TextBox>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox2" Textmode="password" runat="server" placeholder="Password"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>

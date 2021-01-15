@@ -13,6 +13,7 @@ namespace eLibrary
     public partial class Adminlogin : System.Web.UI.Page
     {
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -29,7 +30,7 @@ namespace eLibrary
                     conn.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * from admin_tbl WHERE adminID='" + TextBox1.Text.Trim() + "' AND password='" + TextBox2.Text.Trim() + "' AND role='"+TextBox3.Text.Trim()+"'", conn);
+                SqlCommand cmd = new SqlCommand("SELECT * from admintbl WHERE adminID='" + TextBox1.Text.Trim() + "' AND password='" + TextBox2.Text.Trim() + "' AND roleID='"+TextBox3.Text.Trim()+"'", conn);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
@@ -37,6 +38,9 @@ namespace eLibrary
                     {
                         Response.Write("<script>alert(' " + dr.GetValue(1).ToString() + "');</script>");
                     }
+                    Session["adminid"] = TextBox1.Text;
+                    Session["roleid"] = TextBox3.Text;
+                    Response.Redirect("adminprofile.aspx");
                 }
                 else
                 {

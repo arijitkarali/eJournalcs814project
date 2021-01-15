@@ -37,8 +37,8 @@ namespace eLibrary
             string filepath2 = userFolderPath + "/" + DropDownList1.SelectedItem.Value + "/submitted/" + filename2;
             if (FileUpload1.HasFile&& FileUpload2.HasFile)
             {
-                FileUpload1.SaveAs(filepath1);
-                FileUpload2.SaveAs(filepath2);
+                FileUpload1.SaveAs(userFolderPath + "/" + DropDownList1.SelectedItem.Value + "/submitted/" + filename1);
+                FileUpload2.SaveAs(userFolderPath + "/" + DropDownList1.SelectedItem.Value + "/submitted/" + filename2);
                 
             }
             else
