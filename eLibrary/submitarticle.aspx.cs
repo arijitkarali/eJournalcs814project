@@ -32,13 +32,13 @@ namespace eLibrary
             string subID = TextBox6.Text + userid;
             string filename1 = subID + ".pdf";
             string filename2 = subID + ".jpeg";
-            string userFolderPath = Server.MapPath("~/files");
-            string filepath1 = userFolderPath + "/" + DropDownList1.SelectedItem.Value + "/submitted/" + filename1;
-            string filepath2 = userFolderPath + "/" + DropDownList1.SelectedItem.Value + "/submitted/" + filename2;
+            string userFolderPath = Server.MapPath("~\files");
+            string filepath1 = userFolderPath + "\\" + DropDownList1.SelectedItem.Value + "\\submitted\\" + filename1;
+            string filepath2 = userFolderPath + "\\" + DropDownList1.SelectedItem.Value + "\\submitted\\" + filename2;
             if (FileUpload1.HasFile&& FileUpload2.HasFile)
             {
-                FileUpload1.SaveAs(userFolderPath + "/" + DropDownList1.SelectedItem.Value + "/submitted/" + filename1);
-                FileUpload2.SaveAs(userFolderPath + "/" + DropDownList1.SelectedItem.Value + "/submitted/" + filename2);
+                FileUpload1.SaveAs(filepath1);
+                FileUpload2.SaveAs(filepath2);
                 
             }
             else

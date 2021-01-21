@@ -55,24 +55,24 @@
                             <asp:ListItem Text="Technology" Value="s6"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                </div>
+                </div><br/>
                 <div class="row">
                     <div class="col-md-12" >
                         <label>Upload Manuscript*(pdf)</label>
                         <asp:FileUpload ID="FileUpload1" runat="server" />
                     </div>
-                </div>
+                </div><br/>
                 <div class="row">
                     <div class="col-md-12" >
                         <label>Upload thumbnail*(jpg)</label>
                         <asp:FileUpload ID="FileUpload2" runat="server" />
                     </div>
-                </div>
+                </div><br/>
                 <div class="row">
                     <div class="col-md-12" >
-                        <asp:Button ID="Button1" class="btn btn-lg btn-success" runat="server" Text="Button" OnClick="Button1_Click" />
+                        <asp:Button ID="Button1" class="btn btn-lg btn-success" runat="server" Text="SUBMIT" OnClick="Button1_Click" />
                     </div>
-                </div>
+                </div><br/>
             </div>
         </div>
     </div>

@@ -17,11 +17,11 @@
     <br/>
     
     <br/><hr>
-    <h3>your articles are :</h3>
+    <h3>SUBMISSIONS UNDER REVIEW</h3>
     <div class="row">
         
         <div class="col">
-            <asp:gridview class="table table-striped table-bordered" ID="gridview1" AutoGenerateColumns="False" runat="server" 
+            <asp:gridview class="table table-striped table-bordered" ID="gridview1"  runat="server" 
                 />
                 
             

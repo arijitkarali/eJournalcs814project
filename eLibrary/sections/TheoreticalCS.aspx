@@ -10,7 +10,7 @@
     <div class="row">
         <asp:sqldatasource ID="sqldatasource1" runat="server"
             ConnectionString="<%$ ConnectionStrings:con %>"
-            SelectCommand="SELECT subID,title,authors,date,kewords,Affiliation,pdflink,imglink FROM [articletbl] WHERE category='TheoreticalCS';"></asp:sqldatasource>
+            SelectCommand="SELECT subID,title,authors,date,kewords,Affiliation,pdflink,imglink FROM [articletbl] WHERE (category='s1' AND status='submitted');"></asp:sqldatasource>
         <div class="col">
             <asp:gridview class="table table-striped table-bordered" ID="gridview1" AutoGenerateColumns="False" runat="server" 
                 DataSourceID="sqldatasource1">
@@ -34,11 +34,11 @@
                                         &nbsp;| keywords:(<asp:Label ID="Label5" runat="server" Font-Bold="True" Text='<%# Eval("kewords") %>'></asp:Label>
                                         )
                                         <br />
-                                        <a href="<%# Eval("pdflink") %> "><asp:Button ID="Button1" runat="server" Font-Bold="True" /></a>
+                                        <a href="<%# Eval("pdflink") %> "><asp:Button ID="Button1" CssClass="btn btn-sm btn-primary pull-left" Text="download" runat="server" Font-Bold="True" /></a>
 
                                     </div>
                                     <div class="col-lg-2">
-                                        <asp:Image ID="image1" runat="server" ImageUrl='<%# Eval("imglink") %>'></asp:Image>
+                                        <asp:Image ID="image1" class="img-fluid " runat="server" ImageUrl='<%# Eval("imglink") %>'></asp:Image>
                                     </div>
                                 </div>
                             </div>
